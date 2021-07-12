@@ -4,7 +4,7 @@ import weather
 
 weather_obj = weather.weather_information()
 
-bot = telebot.TeleBot('1863707361:AAGFEtbRnQaRZwPQ5GNdsRhXy98USeGBIvY')
+bot = telebot.TeleBot('token')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_sticker(message):
