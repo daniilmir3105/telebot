@@ -1,5 +1,5 @@
 import telebot
-# import pyowm
+import pyowm
 import weather
 
 weather_obj = weather.weather_information()
@@ -16,6 +16,10 @@ def send_sticker(message):
 
 @bot.message_handler(func=lambda message: True)
 def answer(message):
-	bot.reply_to(message, weather_obj.get_info(message.text))
+    try:
+        bot.reply_to(message, weather_obj.get_info(message.text))
+    except pyowm.commons.exceptions.NotFoundError:
+        bot.reply_to(message, 'Простите, я не совсем вас понял...')
+
 
 bot.polling(none_stop = True)
