@@ -12,6 +12,7 @@ def send_sticker(message):
     chat_id = message.chat.id
     sti = open(r'C:\Users\Daniil\Downloads\sticker_hello.webp', 'rb')
     bot.send_sticker(chat_id, sti)
+    bot.send_message(message.chat.id, 'В каком городе вы хотите узнать погоду?')
 
 @bot.message_handler(func=lambda message: True)
 def answer(message):
