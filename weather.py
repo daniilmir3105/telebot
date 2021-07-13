@@ -8,7 +8,7 @@ class weather_information:
         config_dict = get_default_config()
         config_dict['language'] = 'ru'  # your language here, eg. Portuguese
 
-        owm = pyowm.OWM('53e1dec3517a7f5e30251ccbb9049d18', config_dict)
+        owm = pyowm.OWM('TOKEN', config_dict)
         mgr = owm.weather_manager()
 
         # place = input ("Введите название вашего местоположения(город): ")

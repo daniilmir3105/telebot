@@ -1,6 +1,6 @@
 import telebot 
 
-bot = telebot.TeleBot("1863707361:AAGFEtbRnQaRZwPQ5GNdsRhXy98USeGBIvY")
+bot = telebot.TeleBot("TOKEN")
 keyboard1 = telebot.types.ReplyKeyboardMarkup(True, True)
 keyboard1.row('Скажи, пожалуйста, какие функции у тебя есть?', 'Пока')
 
